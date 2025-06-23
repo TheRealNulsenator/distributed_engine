@@ -65,6 +65,7 @@ bool physics_body_intersect_body(Body a, Body b)
 
     return (min.x <= 0 && max.x >= 0 && min.y <= 0 && max.y >= 0);
 }
+
 AABB minkowski_difference(Body a, Body b)
 {
     AABB result;
@@ -72,6 +73,7 @@ AABB minkowski_difference(Body a, Body b)
     result.radius = vec2_add(a.aabb.radius, b.aabb.radius);
     return result;
 }
+
 Vec2 penetration_vector(AABB aabb)
 {
     Vec2 min, max, result;
